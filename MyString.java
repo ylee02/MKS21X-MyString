@@ -32,7 +32,7 @@ public class MyString implements CharSequence,Comparable<CharSequence> {
 
   public char charAt(int i) {
 	if (i <= 0 || i >= data.length) {
-			throw IndexOutOfBoundsException();
+			throw new IndexOutOfBoundsException();
 	}
 	return data[i];
   }
@@ -42,7 +42,7 @@ public class MyString implements CharSequence,Comparable<CharSequence> {
 		throw new IndexOutOfBoundsException();
 	}
     char[] ans = new char[end - start];
-    for (int i = start; i < end; i++){
+    for (int i = start; i < end; i++){javac 
       ans[i - start] = data[i];
     }
 	CharSequence an = new MyString(ans);
